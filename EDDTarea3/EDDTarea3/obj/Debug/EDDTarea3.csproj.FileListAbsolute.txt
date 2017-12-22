@@ -1,0 +1,9 @@
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\bin\Debug\EDDTarea3.exe.config
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\bin\Debug\EDDTarea3.exe
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\bin\Debug\EDDTarea3.pdb
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.csprojResolveAssemblyReference.cache
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.Form1.resources
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.Properties.Resources.resources
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.csproj.GenerateResource.Cache
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.exe
+c:\users\hptst\documents\visual studio 2015\Projects\EDDTarea3\EDDTarea3\obj\Debug\EDDTarea3.pdb
