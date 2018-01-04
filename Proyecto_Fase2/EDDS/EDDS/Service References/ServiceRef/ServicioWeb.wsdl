@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PintarListaAtaques">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarListaAtaquesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarListaAtaques2">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarListaAtaques2Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarListaEliminadas">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarListaEliminadasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="finJuego">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="J1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="J2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NJ" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AJ1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AJ2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EJ1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EJ2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="finJuegoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarEnHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="v" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEnHashResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retfil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="niv" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pieemi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jemi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retfilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retfilResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retcol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="niv" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pieemi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jemi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retcolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retcolResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mover">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="col" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="niv" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pieemi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="golpe" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pieresep" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jemi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jresep" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fech" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Nataq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoverResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoverResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Atacar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ncol" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nfil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="niv" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dano" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="jemi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="presep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtacarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtacarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retNEliminadasJ2">
+        <s:complexType />
+      </s:element>
+      <s:element name="retNEliminadasJ2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retNEliminadasJ2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retNEliminadasJ1">
+        <s:complexType />
+      </s:element>
+      <s:element name="retNEliminadasJ1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retNEliminadasJ1Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retNAtaquesJ2">
+        <s:complexType />
+      </s:element>
+      <s:element name="retNAtaquesJ2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retNAtaquesJ2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retNAtaquesJ1">
+        <s:complexType />
+      </s:element>
+      <s:element name="retNAtaquesJ1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retNAtaquesJ1Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retNJuego">
+        <s:complexType />
+      </s:element>
+      <s:element name="retNJuegoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retNJuegoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasAtaques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasAtaquesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MasNJuego">
+        <s:complexType />
+      </s:element>
+      <s:element name="MasNJuegoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MasEliminadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasEliminadasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MasHistorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasHistorialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHistorial">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHistorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHistorialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetActual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetActualResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetActual">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetActualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEntra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEntraResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEntra">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEntraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetEntraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Prueva2">
+        <s:complexType />
+      </s:element>
+      <s:element name="Prueva2Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="Prueva">
+        <s:complexType />
+      </s:element>
+      <s:element name="PruevaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="NuevaHASH">
+        <s:complexType />
+      </s:element>
+      <s:element name="NuevaHASHResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarHASH">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarHASHResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Parametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="j1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="j2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nn1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nn2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nn3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nn4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tim" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametrosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetJugador1">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetJugador1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetJugador1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetJugador2">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetJugador2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetJugador2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetTamanoX">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetTamanoXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetTamanoXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetTamanoY">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetTamanoYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetTamanoYResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetTipo">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetTipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetTipoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetTiempo">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetTiempoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetTiempoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsercionMasivaArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cont" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Corr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Logi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsercionMasivaArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsercionMasivaListasDelArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Op" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bb" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cc" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dd" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ee" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsercionMasivaListasDelArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsercionMasivaAVLDelArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Op" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsercionMasivaAVLDelArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrarEnAVLDelArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Op" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarEnAVLDelArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarEnAVLDelArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Op" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEnAVLDelArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarAVLDelArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UB" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PintarAVLDelArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Pintar">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarEnArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEnArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscarEnArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEnArbolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BuscarEnArbolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEnArbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Log" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEnArbolResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IncertarEnMatrizLive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jug" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="col" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fil" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="uni" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="des" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncertarEnMatrizLiveResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarMSobrevivientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarMSobrevivientesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarMDestruidas">
+        <s:complexType />
+      </s:element>
+      <s:element name="PintarMDestruidasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarEnMatriz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jug" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="col" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fil" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="uni" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="niv" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEnMatrizResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CopiarImagenes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="r" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopiarImagenesResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PintarListaAtaquesSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarListaAtaques" />
+  </wsdl:message>
+  <wsdl:message name="PintarListaAtaquesSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarListaAtaquesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarListaAtaques2SoapIn">
+    <wsdl:part name="parameters" element="tns:PintarListaAtaques2" />
+  </wsdl:message>
+  <wsdl:message name="PintarListaAtaques2SoapOut">
+    <wsdl:part name="parameters" element="tns:PintarListaAtaques2Response" />
+  </wsdl:message>
+  <wsdl:message name="PintarListaEliminadasSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarListaEliminadas" />
+  </wsdl:message>
+  <wsdl:message name="PintarListaEliminadasSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarListaEliminadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="finJuegoSoapIn">
+    <wsdl:part name="parameters" element="tns:finJuego" />
+  </wsdl:message>
+  <wsdl:message name="finJuegoSoapOut">
+    <wsdl:part name="parameters" element="tns:finJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnHashSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEnHash" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnHashSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEnHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="retfilSoapIn">
+    <wsdl:part name="parameters" element="tns:retfil" />
+  </wsdl:message>
+  <wsdl:message name="retfilSoapOut">
+    <wsdl:part name="parameters" element="tns:retfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="retcolSoapIn">
+    <wsdl:part name="parameters" element="tns:retcol" />
+  </wsdl:message>
+  <wsdl:message name="retcolSoapOut">
+    <wsdl:part name="parameters" element="tns:retcolResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoverSoapIn">
+    <wsdl:part name="parameters" element="tns:Mover" />
+  </wsdl:message>
+  <wsdl:message name="MoverSoapOut">
+    <wsdl:part name="parameters" element="tns:MoverResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtacarSoapIn">
+    <wsdl:part name="parameters" element="tns:Atacar" />
+  </wsdl:message>
+  <wsdl:message name="AtacarSoapOut">
+    <wsdl:part name="parameters" element="tns:AtacarResponse" />
+  </wsdl:message>
+  <wsdl:message name="retNEliminadasJ2SoapIn">
+    <wsdl:part name="parameters" element="tns:retNEliminadasJ2" />
+  </wsdl:message>
+  <wsdl:message name="retNEliminadasJ2SoapOut">
+    <wsdl:part name="parameters" element="tns:retNEliminadasJ2Response" />
+  </wsdl:message>
+  <wsdl:message name="retNEliminadasJ1SoapIn">
+    <wsdl:part name="parameters" element="tns:retNEliminadasJ1" />
+  </wsdl:message>
+  <wsdl:message name="retNEliminadasJ1SoapOut">
+    <wsdl:part name="parameters" element="tns:retNEliminadasJ1Response" />
+  </wsdl:message>
+  <wsdl:message name="retNAtaquesJ2SoapIn">
+    <wsdl:part name="parameters" element="tns:retNAtaquesJ2" />
+  </wsdl:message>
+  <wsdl:message name="retNAtaquesJ2SoapOut">
+    <wsdl:part name="parameters" element="tns:retNAtaquesJ2Response" />
+  </wsdl:message>
+  <wsdl:message name="retNAtaquesJ1SoapIn">
+    <wsdl:part name="parameters" element="tns:retNAtaquesJ1" />
+  </wsdl:message>
+  <wsdl:message name="retNAtaquesJ1SoapOut">
+    <wsdl:part name="parameters" element="tns:retNAtaquesJ1Response" />
+  </wsdl:message>
+  <wsdl:message name="retNJuegoSoapIn">
+    <wsdl:part name="parameters" element="tns:retNJuego" />
+  </wsdl:message>
+  <wsdl:message name="retNJuegoSoapOut">
+    <wsdl:part name="parameters" element="tns:retNJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasAtaquesSoapIn">
+    <wsdl:part name="parameters" element="tns:MasAtaques" />
+  </wsdl:message>
+  <wsdl:message name="MasAtaquesSoapOut">
+    <wsdl:part name="parameters" element="tns:MasAtaquesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasNJuegoSoapIn">
+    <wsdl:part name="parameters" element="tns:MasNJuego" />
+  </wsdl:message>
+  <wsdl:message name="MasNJuegoSoapOut">
+    <wsdl:part name="parameters" element="tns:MasNJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasEliminadasSoapIn">
+    <wsdl:part name="parameters" element="tns:MasEliminadas" />
+  </wsdl:message>
+  <wsdl:message name="MasEliminadasSoapOut">
+    <wsdl:part name="parameters" element="tns:MasEliminadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasHistorialSoapIn">
+    <wsdl:part name="parameters" element="tns:MasHistorial" />
+  </wsdl:message>
+  <wsdl:message name="MasHistorialSoapOut">
+    <wsdl:part name="parameters" element="tns:MasHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHistorialSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHistorial" />
+  </wsdl:message>
+  <wsdl:message name="GetHistorialSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetActualSoapIn">
+    <wsdl:part name="parameters" element="tns:SetActual" />
+  </wsdl:message>
+  <wsdl:message name="SetActualSoapOut">
+    <wsdl:part name="parameters" element="tns:SetActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActualSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActual" />
+  </wsdl:message>
+  <wsdl:message name="GetActualSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEntraSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEntra" />
+  </wsdl:message>
+  <wsdl:message name="SetEntraSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEntraResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntraSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntra" />
+  </wsdl:message>
+  <wsdl:message name="GetEntraSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntraResponse" />
+  </wsdl:message>
+  <wsdl:message name="Prueva2SoapIn">
+    <wsdl:part name="parameters" element="tns:Prueva2" />
+  </wsdl:message>
+  <wsdl:message name="Prueva2SoapOut">
+    <wsdl:part name="parameters" element="tns:Prueva2Response" />
+  </wsdl:message>
+  <wsdl:message name="PruevaSoapIn">
+    <wsdl:part name="parameters" element="tns:Prueva" />
+  </wsdl:message>
+  <wsdl:message name="PruevaSoapOut">
+    <wsdl:part name="parameters" element="tns:PruevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="NuevaHASHSoapIn">
+    <wsdl:part name="parameters" element="tns:NuevaHASH" />
+  </wsdl:message>
+  <wsdl:message name="NuevaHASHSoapOut">
+    <wsdl:part name="parameters" element="tns:NuevaHASHResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarHASHSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarHASH" />
+  </wsdl:message>
+  <wsdl:message name="PintarHASHSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarHASHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:Parametros" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:ParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetJugador1SoapIn">
+    <wsdl:part name="parameters" element="tns:RetJugador1" />
+  </wsdl:message>
+  <wsdl:message name="RetJugador1SoapOut">
+    <wsdl:part name="parameters" element="tns:RetJugador1Response" />
+  </wsdl:message>
+  <wsdl:message name="RetJugador2SoapIn">
+    <wsdl:part name="parameters" element="tns:RetJugador2" />
+  </wsdl:message>
+  <wsdl:message name="RetJugador2SoapOut">
+    <wsdl:part name="parameters" element="tns:RetJugador2Response" />
+  </wsdl:message>
+  <wsdl:message name="RetTamanoXSoapIn">
+    <wsdl:part name="parameters" element="tns:RetTamanoX" />
+  </wsdl:message>
+  <wsdl:message name="RetTamanoXSoapOut">
+    <wsdl:part name="parameters" element="tns:RetTamanoXResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetTamanoYSoapIn">
+    <wsdl:part name="parameters" element="tns:RetTamanoY" />
+  </wsdl:message>
+  <wsdl:message name="RetTamanoYSoapOut">
+    <wsdl:part name="parameters" element="tns:RetTamanoYResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetTipoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetTipo" />
+  </wsdl:message>
+  <wsdl:message name="RetTipoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetTiempoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetTiempo" />
+  </wsdl:message>
+  <wsdl:message name="RetTiempoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetTiempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaArbol" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaListasDelArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaListasDelArbol" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaListasDelArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaListasDelArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaAVLDelArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaAVLDelArbol" />
+  </wsdl:message>
+  <wsdl:message name="InsercionMasivaAVLDelArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:InsercionMasivaAVLDelArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarEnAVLDelArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarEnAVLDelArbol" />
+  </wsdl:message>
+  <wsdl:message name="BorrarEnAVLDelArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarEnAVLDelArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEnAVLDelArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarEnAVLDelArbol" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEnAVLDelArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarEnAVLDelArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarAVLDelArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarAVLDelArbol" />
+  </wsdl:message>
+  <wsdl:message name="PintarAVLDelArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarAVLDelArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarSoapIn">
+    <wsdl:part name="parameters" element="tns:Pintar" />
+  </wsdl:message>
+  <wsdl:message name="PintarSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEnArbol" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEnArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEnArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEnArbol" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEnArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEnArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEnArbolSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarEnArbol" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEnArbolSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarEnArbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncertarEnMatrizLiveSoapIn">
+    <wsdl:part name="parameters" element="tns:IncertarEnMatrizLive" />
+  </wsdl:message>
+  <wsdl:message name="IncertarEnMatrizLiveSoapOut">
+    <wsdl:part name="parameters" element="tns:IncertarEnMatrizLiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarMSobrevivientesSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarMSobrevivientes" />
+  </wsdl:message>
+  <wsdl:message name="PintarMSobrevivientesSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarMSobrevivientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PintarMDestruidasSoapIn">
+    <wsdl:part name="parameters" element="tns:PintarMDestruidas" />
+  </wsdl:message>
+  <wsdl:message name="PintarMDestruidasSoapOut">
+    <wsdl:part name="parameters" element="tns:PintarMDestruidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnMatrizSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEnMatriz" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEnMatrizSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEnMatrizResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopiarImagenesSoapIn">
+    <wsdl:part name="parameters" element="tns:CopiarImagenes" />
+  </wsdl:message>
+  <wsdl:message name="CopiarImagenesSoapOut">
+    <wsdl:part name="parameters" element="tns:CopiarImagenesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioWebSoap">
+    <wsdl:operation name="PintarListaAtaques">
+      <wsdl:input message="tns:PintarListaAtaquesSoapIn" />
+      <wsdl:output message="tns:PintarListaAtaquesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaAtaques2">
+      <wsdl:input message="tns:PintarListaAtaques2SoapIn" />
+      <wsdl:output message="tns:PintarListaAtaques2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaEliminadas">
+      <wsdl:input message="tns:PintarListaEliminadasSoapIn" />
+      <wsdl:output message="tns:PintarListaEliminadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="finJuego">
+      <wsdl:input message="tns:finJuegoSoapIn" />
+      <wsdl:output message="tns:finJuegoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnHash">
+      <wsdl:input message="tns:EliminarEnHashSoapIn" />
+      <wsdl:output message="tns:EliminarEnHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retfil">
+      <wsdl:input message="tns:retfilSoapIn" />
+      <wsdl:output message="tns:retfilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retcol">
+      <wsdl:input message="tns:retcolSoapIn" />
+      <wsdl:output message="tns:retcolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mover">
+      <wsdl:input message="tns:MoverSoapIn" />
+      <wsdl:output message="tns:MoverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Atacar">
+      <wsdl:input message="tns:AtacarSoapIn" />
+      <wsdl:output message="tns:AtacarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ2">
+      <wsdl:input message="tns:retNEliminadasJ2SoapIn" />
+      <wsdl:output message="tns:retNEliminadasJ2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ1">
+      <wsdl:input message="tns:retNEliminadasJ1SoapIn" />
+      <wsdl:output message="tns:retNEliminadasJ1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ2">
+      <wsdl:input message="tns:retNAtaquesJ2SoapIn" />
+      <wsdl:output message="tns:retNAtaquesJ2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ1">
+      <wsdl:input message="tns:retNAtaquesJ1SoapIn" />
+      <wsdl:output message="tns:retNAtaquesJ1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retNJuego">
+      <wsdl:input message="tns:retNJuegoSoapIn" />
+      <wsdl:output message="tns:retNJuegoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasAtaques">
+      <wsdl:input message="tns:MasAtaquesSoapIn" />
+      <wsdl:output message="tns:MasAtaquesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasNJuego">
+      <wsdl:input message="tns:MasNJuegoSoapIn" />
+      <wsdl:output message="tns:MasNJuegoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasEliminadas">
+      <wsdl:input message="tns:MasEliminadasSoapIn" />
+      <wsdl:output message="tns:MasEliminadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasHistorial">
+      <wsdl:input message="tns:MasHistorialSoapIn" />
+      <wsdl:output message="tns:MasHistorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistorial">
+      <wsdl:input message="tns:GetHistorialSoapIn" />
+      <wsdl:output message="tns:GetHistorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetActual">
+      <wsdl:input message="tns:SetActualSoapIn" />
+      <wsdl:output message="tns:SetActualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActual">
+      <wsdl:input message="tns:GetActualSoapIn" />
+      <wsdl:output message="tns:GetActualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEntra">
+      <wsdl:input message="tns:SetEntraSoapIn" />
+      <wsdl:output message="tns:SetEntraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntra">
+      <wsdl:input message="tns:GetEntraSoapIn" />
+      <wsdl:output message="tns:GetEntraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Prueva2">
+      <wsdl:input message="tns:Prueva2SoapIn" />
+      <wsdl:output message="tns:Prueva2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Prueva">
+      <wsdl:input message="tns:PruevaSoapIn" />
+      <wsdl:output message="tns:PruevaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NuevaHASH">
+      <wsdl:input message="tns:NuevaHASHSoapIn" />
+      <wsdl:output message="tns:NuevaHASHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarHASH">
+      <wsdl:input message="tns:PintarHASHSoapIn" />
+      <wsdl:output message="tns:PintarHASHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros">
+      <wsdl:input message="tns:ParametrosSoapIn" />
+      <wsdl:output message="tns:ParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador1">
+      <wsdl:input message="tns:RetJugador1SoapIn" />
+      <wsdl:output message="tns:RetJugador1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador2">
+      <wsdl:input message="tns:RetJugador2SoapIn" />
+      <wsdl:output message="tns:RetJugador2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoX">
+      <wsdl:input message="tns:RetTamanoXSoapIn" />
+      <wsdl:output message="tns:RetTamanoXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoY">
+      <wsdl:input message="tns:RetTamanoYSoapIn" />
+      <wsdl:output message="tns:RetTamanoYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetTipo">
+      <wsdl:input message="tns:RetTipoSoapIn" />
+      <wsdl:output message="tns:RetTipoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetTiempo">
+      <wsdl:input message="tns:RetTiempoSoapIn" />
+      <wsdl:output message="tns:RetTiempoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaArbol">
+      <wsdl:input message="tns:InsercionMasivaArbolSoapIn" />
+      <wsdl:output message="tns:InsercionMasivaArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaListasDelArbol">
+      <wsdl:input message="tns:InsercionMasivaListasDelArbolSoapIn" />
+      <wsdl:output message="tns:InsercionMasivaListasDelArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaAVLDelArbol">
+      <wsdl:input message="tns:InsercionMasivaAVLDelArbolSoapIn" />
+      <wsdl:output message="tns:InsercionMasivaAVLDelArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarEnAVLDelArbol">
+      <wsdl:input message="tns:BorrarEnAVLDelArbolSoapIn" />
+      <wsdl:output message="tns:BorrarEnAVLDelArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnAVLDelArbol">
+      <wsdl:input message="tns:ModificarEnAVLDelArbolSoapIn" />
+      <wsdl:output message="tns:ModificarEnAVLDelArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarAVLDelArbol">
+      <wsdl:input message="tns:PintarAVLDelArbolSoapIn" />
+      <wsdl:output message="tns:PintarAVLDelArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pintar">
+      <wsdl:input message="tns:PintarSoapIn" />
+      <wsdl:output message="tns:PintarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnArbol">
+      <wsdl:input message="tns:EliminarEnArbolSoapIn" />
+      <wsdl:output message="tns:EliminarEnArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEnArbol">
+      <wsdl:input message="tns:BuscarEnArbolSoapIn" />
+      <wsdl:output message="tns:BuscarEnArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnArbol">
+      <wsdl:input message="tns:ModificarEnArbolSoapIn" />
+      <wsdl:output message="tns:ModificarEnArbolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncertarEnMatrizLive">
+      <wsdl:input message="tns:IncertarEnMatrizLiveSoapIn" />
+      <wsdl:output message="tns:IncertarEnMatrizLiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarMSobrevivientes">
+      <wsdl:input message="tns:PintarMSobrevivientesSoapIn" />
+      <wsdl:output message="tns:PintarMSobrevivientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PintarMDestruidas">
+      <wsdl:input message="tns:PintarMDestruidasSoapIn" />
+      <wsdl:output message="tns:PintarMDestruidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnMatriz">
+      <wsdl:input message="tns:EliminarEnMatrizSoapIn" />
+      <wsdl:output message="tns:EliminarEnMatrizSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopiarImagenes">
+      <wsdl:input message="tns:CopiarImagenesSoapIn" />
+      <wsdl:output message="tns:CopiarImagenesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioWebSoap" type="tns:ServicioWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PintarListaAtaques">
+      <soap:operation soapAction="http://tempuri.org/PintarListaAtaques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaAtaques2">
+      <soap:operation soapAction="http://tempuri.org/PintarListaAtaques2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaEliminadas">
+      <soap:operation soapAction="http://tempuri.org/PintarListaEliminadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finJuego">
+      <soap:operation soapAction="http://tempuri.org/finJuego" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnHash">
+      <soap:operation soapAction="http://tempuri.org/EliminarEnHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retfil">
+      <soap:operation soapAction="http://tempuri.org/retfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retcol">
+      <soap:operation soapAction="http://tempuri.org/retcol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mover">
+      <soap:operation soapAction="http://tempuri.org/Mover" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Atacar">
+      <soap:operation soapAction="http://tempuri.org/Atacar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ2">
+      <soap:operation soapAction="http://tempuri.org/retNEliminadasJ2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ1">
+      <soap:operation soapAction="http://tempuri.org/retNEliminadasJ1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ2">
+      <soap:operation soapAction="http://tempuri.org/retNAtaquesJ2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ1">
+      <soap:operation soapAction="http://tempuri.org/retNAtaquesJ1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNJuego">
+      <soap:operation soapAction="http://tempuri.org/retNJuego" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasAtaques">
+      <soap:operation soapAction="http://tempuri.org/MasAtaques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasNJuego">
+      <soap:operation soapAction="http://tempuri.org/MasNJuego" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasEliminadas">
+      <soap:operation soapAction="http://tempuri.org/MasEliminadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasHistorial">
+      <soap:operation soapAction="http://tempuri.org/MasHistorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistorial">
+      <soap:operation soapAction="http://tempuri.org/GetHistorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetActual">
+      <soap:operation soapAction="http://tempuri.org/SetActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActual">
+      <soap:operation soapAction="http://tempuri.org/GetActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEntra">
+      <soap:operation soapAction="http://tempuri.org/SetEntra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntra">
+      <soap:operation soapAction="http://tempuri.org/GetEntra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prueva2">
+      <soap:operation soapAction="http://tempuri.org/Prueva2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prueva">
+      <soap:operation soapAction="http://tempuri.org/Prueva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevaHASH">
+      <soap:operation soapAction="http://tempuri.org/NuevaHASH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarHASH">
+      <soap:operation soapAction="http://tempuri.org/PintarHASH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros">
+      <soap:operation soapAction="http://tempuri.org/Parametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador1">
+      <soap:operation soapAction="http://tempuri.org/RetJugador1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador2">
+      <soap:operation soapAction="http://tempuri.org/RetJugador2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoX">
+      <soap:operation soapAction="http://tempuri.org/RetTamanoX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoY">
+      <soap:operation soapAction="http://tempuri.org/RetTamanoY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTipo">
+      <soap:operation soapAction="http://tempuri.org/RetTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTiempo">
+      <soap:operation soapAction="http://tempuri.org/RetTiempo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaArbol">
+      <soap:operation soapAction="http://tempuri.org/InsercionMasivaArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaListasDelArbol">
+      <soap:operation soapAction="http://tempuri.org/InsercionMasivaListasDelArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaAVLDelArbol">
+      <soap:operation soapAction="http://tempuri.org/InsercionMasivaAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarEnAVLDelArbol">
+      <soap:operation soapAction="http://tempuri.org/BorrarEnAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnAVLDelArbol">
+      <soap:operation soapAction="http://tempuri.org/ModificarEnAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarAVLDelArbol">
+      <soap:operation soapAction="http://tempuri.org/PintarAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pintar">
+      <soap:operation soapAction="http://tempuri.org/Pintar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnArbol">
+      <soap:operation soapAction="http://tempuri.org/EliminarEnArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEnArbol">
+      <soap:operation soapAction="http://tempuri.org/BuscarEnArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnArbol">
+      <soap:operation soapAction="http://tempuri.org/ModificarEnArbol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncertarEnMatrizLive">
+      <soap:operation soapAction="http://tempuri.org/IncertarEnMatrizLive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarMSobrevivientes">
+      <soap:operation soapAction="http://tempuri.org/PintarMSobrevivientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarMDestruidas">
+      <soap:operation soapAction="http://tempuri.org/PintarMDestruidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnMatriz">
+      <soap:operation soapAction="http://tempuri.org/EliminarEnMatriz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopiarImagenes">
+      <soap:operation soapAction="http://tempuri.org/CopiarImagenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioWebSoap12" type="tns:ServicioWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PintarListaAtaques">
+      <soap12:operation soapAction="http://tempuri.org/PintarListaAtaques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaAtaques2">
+      <soap12:operation soapAction="http://tempuri.org/PintarListaAtaques2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarListaEliminadas">
+      <soap12:operation soapAction="http://tempuri.org/PintarListaEliminadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finJuego">
+      <soap12:operation soapAction="http://tempuri.org/finJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnHash">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEnHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retfil">
+      <soap12:operation soapAction="http://tempuri.org/retfil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retcol">
+      <soap12:operation soapAction="http://tempuri.org/retcol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mover">
+      <soap12:operation soapAction="http://tempuri.org/Mover" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Atacar">
+      <soap12:operation soapAction="http://tempuri.org/Atacar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ2">
+      <soap12:operation soapAction="http://tempuri.org/retNEliminadasJ2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNEliminadasJ1">
+      <soap12:operation soapAction="http://tempuri.org/retNEliminadasJ1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ2">
+      <soap12:operation soapAction="http://tempuri.org/retNAtaquesJ2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNAtaquesJ1">
+      <soap12:operation soapAction="http://tempuri.org/retNAtaquesJ1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retNJuego">
+      <soap12:operation soapAction="http://tempuri.org/retNJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasAtaques">
+      <soap12:operation soapAction="http://tempuri.org/MasAtaques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasNJuego">
+      <soap12:operation soapAction="http://tempuri.org/MasNJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasEliminadas">
+      <soap12:operation soapAction="http://tempuri.org/MasEliminadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasHistorial">
+      <soap12:operation soapAction="http://tempuri.org/MasHistorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistorial">
+      <soap12:operation soapAction="http://tempuri.org/GetHistorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetActual">
+      <soap12:operation soapAction="http://tempuri.org/SetActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActual">
+      <soap12:operation soapAction="http://tempuri.org/GetActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEntra">
+      <soap12:operation soapAction="http://tempuri.org/SetEntra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntra">
+      <soap12:operation soapAction="http://tempuri.org/GetEntra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prueva2">
+      <soap12:operation soapAction="http://tempuri.org/Prueva2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prueva">
+      <soap12:operation soapAction="http://tempuri.org/Prueva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevaHASH">
+      <soap12:operation soapAction="http://tempuri.org/NuevaHASH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarHASH">
+      <soap12:operation soapAction="http://tempuri.org/PintarHASH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros">
+      <soap12:operation soapAction="http://tempuri.org/Parametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador1">
+      <soap12:operation soapAction="http://tempuri.org/RetJugador1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetJugador2">
+      <soap12:operation soapAction="http://tempuri.org/RetJugador2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoX">
+      <soap12:operation soapAction="http://tempuri.org/RetTamanoX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTamanoY">
+      <soap12:operation soapAction="http://tempuri.org/RetTamanoY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTipo">
+      <soap12:operation soapAction="http://tempuri.org/RetTipo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetTiempo">
+      <soap12:operation soapAction="http://tempuri.org/RetTiempo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaArbol">
+      <soap12:operation soapAction="http://tempuri.org/InsercionMasivaArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaListasDelArbol">
+      <soap12:operation soapAction="http://tempuri.org/InsercionMasivaListasDelArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsercionMasivaAVLDelArbol">
+      <soap12:operation soapAction="http://tempuri.org/InsercionMasivaAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarEnAVLDelArbol">
+      <soap12:operation soapAction="http://tempuri.org/BorrarEnAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnAVLDelArbol">
+      <soap12:operation soapAction="http://tempuri.org/ModificarEnAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarAVLDelArbol">
+      <soap12:operation soapAction="http://tempuri.org/PintarAVLDelArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pintar">
+      <soap12:operation soapAction="http://tempuri.org/Pintar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnArbol">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEnArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEnArbol">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEnArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEnArbol">
+      <soap12:operation soapAction="http://tempuri.org/ModificarEnArbol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncertarEnMatrizLive">
+      <soap12:operation soapAction="http://tempuri.org/IncertarEnMatrizLive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarMSobrevivientes">
+      <soap12:operation soapAction="http://tempuri.org/PintarMSobrevivientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PintarMDestruidas">
+      <soap12:operation soapAction="http://tempuri.org/PintarMDestruidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEnMatriz">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEnMatriz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopiarImagenes">
+      <soap12:operation soapAction="http://tempuri.org/CopiarImagenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioWeb">
+    <wsdl:port name="ServicioWebSoap" binding="tns:ServicioWebSoap">
+      <soap:address location="http://localhost:55771/ServicioWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioWebSoap12" binding="tns:ServicioWebSoap12">
+      <soap12:address location="http://localhost:55771/ServicioWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

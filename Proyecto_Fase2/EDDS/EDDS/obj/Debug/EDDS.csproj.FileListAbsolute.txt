@@ -1,0 +1,99 @@
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\ApplicationInsights.config
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\csc.exe
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\System.Collections.Immutable.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\vbc.exe
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe.config
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\EDDS.dll.config
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\EDDS.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\EDDS.pdb
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.Web.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.ApplicationInsights.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.Web.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.ApplicationInsights.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\obj\Debug\EDDS.csprojResolveAssemblyReference.cache
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\obj\Debug\EDDS.dll
+c:\users\hptst\documents\visual studio 2015\Projects\EDDS\EDDS\obj\Debug\EDDS.pdb
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\ApplicationInsights.config
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\csc.exe
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\vbc.exe
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\EDDS.dll.config
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\EDDS.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\EDDS.pdb
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.Web.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.Web.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\obj\Debug\EDDS.csprojResolveAssemblyReference.cache
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\obj\Debug\EDDS.dll
+C:\Users\HPTST\Desktop\Web\EDDS\EDDS\obj\Debug\EDDS.pdb
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\ApplicationInsights.config
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\csc.exe
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\vbc.exe
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\EDDS.dll.config
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\EDDS.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\EDDS.pdb
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.Web.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.Web.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\obj\Debug\EDDS.csprojResolveAssemblyReference.cache
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\obj\Debug\EDDS.dll
+C:\Users\HPTST\Desktop\Web3\EDDS\EDDS\obj\Debug\EDDS.pdb
